@@ -1,0 +1,27 @@
+{
+  "name": "time-management",
+  "version": "0.0.0",
+  "description": "TimeManagement",
+  "main": "app.js",
+  "author": {
+    "name": "admin"
+  },
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "async": "^2.0.1",
+    "bcryptjs": "^2.3.0",
+    "body-parser": "^1.15.2",
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "email-validator": "^1.0.4",
+    "express": "^4.14.0",
+    "express-jwt": "^3.4.0",
+    "have": "^0.4.0",
+    "jade": "^1.11.0",
+    "jsonwebtoken": "^7.1.9",
+    "moment": "^2.14.1",
+    "pg": "^6.1.0"
+  }
+}

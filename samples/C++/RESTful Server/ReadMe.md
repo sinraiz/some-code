@@ -1,0 +1,1 @@
+This example demonstrates a full functional yet dummy RESTful server written in C++ 11

@@ -1,0 +1,1 @@
+This SQL code demonstrates the use of relatively complex DB queries to build a couple of Views in Postgres.

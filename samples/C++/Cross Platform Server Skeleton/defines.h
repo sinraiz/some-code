@@ -1,0 +1,21 @@
+#pragma once
+
+//#define BOOST_LIB_DIAGNOSTIC
+
+#define BOOST_APPLICATION_FEATURE_NS_SELECT_STD
+#define USE_POSIX_WAIT_FOR_TERMINATION_REQUEST_SIGUSR1_BASED
+
+#ifdef WIN32
+
+#define _USING_V120_SDK71_ 1
+#define _WINSOCK_DEPRECATED_NO_WARNINGS
+#define _SCL_SECURE_NO_WARNINGS
+
+#define _DAEMON_ "service"
+
+#else
+
+#define _DAEMON_ "daemon"
+
+#endif // WIN32
+

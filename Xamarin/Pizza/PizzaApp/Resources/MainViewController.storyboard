@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+    </dependencies>
+    <scenes>
+        <scene sceneID="4">
+            <objects>
+                <viewController id="5" sceneMemberID="viewController" customClass="MainViewController" title="Popular Pizzas">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2"/>
+                        <viewControllerLayoutGuide type="bottom" id="3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.58431372549019611" green="0.2196078431372549" blue="0.23137254901960785" alpha="1"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="21" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="0.0" y="64" width="600" height="376"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="99" rowHeight="111" customClass="PizzaViewCell" reuseIdentifier="PizzaCellID">
+                                        <rect key="frame" x="0.0" y="22" width="600" height="111"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="99" id="100">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="110.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Very long text" lineBreakMode="tailTruncation" id="101" translatesAutoresizingMaskIntoConstraints="NO" adjustsFontSizeToFit="NO">
+                                                    <rect key="frame" x="16" y="20.5" width="478" height="17"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" colorSpace="calibratedRGB" red="0.58431372549019611" green="0.32549019607843138" blue="0.12941176470588237" alpha="1"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="XXX" lineBreakMode="tailTruncation" minimumFontSize="10" id="102" translatesAutoresizingMaskIntoConstraints="NO" textAlignment="right">
+                                                    <rect key="frame" x="510" y="20.5" width="32" height="17"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" colorSpace="calibratedRGB" red="0.98039215686274506" green="0.60392156862745094" blue="0.30196078431372547" alpha="1"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <constraints>
+                                                        <constraint id="208" firstItem="102" firstAttribute="width" constant="32"/>
+                                                    </constraints>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="117" translatesAutoresizingMaskIntoConstraints="NO">
+                                                    <rect key="frame" x="558" y="16" width="26" height="26"/>
+                                                    <state key="normal" image="arrow-down.png">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <constraints>
+                                                        <constraint id="120" firstItem="117" firstAttribute="width" constant="26"/>
+                                                        <constraint id="137" firstItem="117" firstAttribute="height" constant="26"/>
+                                                    </constraints>
+                                                    <edgeInsets key="layoutMargins" top="8" left="8" bottom="16" right="8"/>
+                                                    <connections>
+                                                        <action selector="BtnExpand_TouchUpInside:" destination="99" id="132" eventType="touchUpInside"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint id="103" firstItem="101" firstAttribute="leading" secondItem="100" secondAttribute="leading" constant="16"/>
+                                                <constraint id="118" firstItem="100" firstAttribute="trailing" secondItem="117" secondAttribute="trailing" constant="16"/>
+                                                <constraint id="119" firstItem="117" firstAttribute="top" secondItem="100" secondAttribute="top" constant="16"/>
+                                                <constraint id="124" firstItem="117" firstAttribute="leading" secondItem="102" secondAttribute="trailing" constant="16"/>
+                                                <constraint id="141" firstItem="102" firstAttribute="centerY" secondItem="117" secondAttribute="centerY"/>
+                                                <constraint id="142" firstItem="102" firstAttribute="leading" secondItem="101" secondAttribute="trailing" constant="16"/>
+                                                <constraint id="143" firstItem="101" firstAttribute="centerY" secondItem="102" secondAttribute="centerY"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblPizzaTitle" destination="101" id="name-outlet-101"/>
+                                            <outlet property="lblOrdersCount" destination="102" id="name-outlet-102"/>
+                                            <outlet property="btnExpand" destination="117" id="name-outlet-117"/>
+                                        </connections>
+                                        <color key="backgroundColor" colorSpace="calibratedWhite" white="0" alpha="0"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <color key="sectionIndexBackgroundColor" colorSpace="calibratedRGB" red="0.027450980392156862" green="0.97254901960784312" blue="0.7686274509803922" alpha="1"/>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" id="31" translatesAutoresizingMaskIntoConstraints="NO" translucent="NO">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Top Pizzas" id="212" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <barButtonItem id="213" translatesAutoresizingMaskIntoConstraints="NO" key="rightBarButtonItem" image="expand-all.png">
+                                            <connections>
+                                                <action selector="BtnExpandAll_Activated:" destination="5" id="215"/>
+                                            </connections>
+                                            <color key="tintColor" colorSpace="calibratedRGB" red="0.93333333333333335" green="0.89803921568627454" blue="0.86274509803921573" alpha="1"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                                <color key="barTintColor" colorSpace="calibratedRGB" red="0.58431372549019611" green="0.2196078431372549" blue="0.23137254901960785" alpha="1"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" colorSpace="calibratedRGB" red="0.93333333333333335" green="0.89803921568627454" blue="0.86274509803921573" alpha="1"/>
+                                </textAttributes>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" id="221" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="0.0" y="64" width="600" height="516"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.062745098039215685" green="0.93725490196078431" blue="0.93725490196078431" alpha="0.39215686274509803"/>
+                                <subviews>
+                                    <progressView opaque="NO" contentMode="scaleToFill" progress="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="226">
+                                        <rect key="frame" x="32" y="263.5" width="536" height="9"/>
+                                        <constraints>
+                                            <constraint id="240" firstItem="226" firstAttribute="height" constant="9"/>
+                                        </constraints>
+                                        <color key="tintColor" colorSpace="calibratedRGB" red="0" green="0.52549019607843139" blue="1" alpha="1"/>
+                                        <color key="trackTintColor" colorSpace="calibratedRGB" red="0.13333333333333333" green="0.13725490196078433" blue="0.15686274509803921" alpha="1"/>
+                                        <color key="progressTintColor" colorSpace="calibratedRGB" red="0.55294117647058827" green="0.62745098039215685" blue="0.30980392156862746" alpha="1"/>
+                                    </progressView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Reading data..." lineBreakMode="tailTruncation" minimumFontSize="10" id="241" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="231.5" y="235" width="137" height="20.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" colorSpace="calibratedRGB" red="0.13333333333333333" green="0.13725490196078433" blue="0.15686274509803921" alpha="1"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint id="237" firstItem="221" firstAttribute="centerY" secondItem="226" secondAttribute="centerY"/>
+                                    <constraint id="238" firstItem="226" firstAttribute="leading" secondItem="221" secondAttribute="leading" constant="32"/>
+                                    <constraint id="239" firstItem="221" firstAttribute="trailing" secondItem="226" secondAttribute="trailing" constant="32"/>
+                                    <constraint id="242" firstItem="226" firstAttribute="centerY" secondItem="241" secondAttribute="centerY" constant="23"/>
+                                    <constraint id="243" firstItem="221" firstAttribute="centerX" secondItem="241" secondAttribute="centerX"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint id="33" firstItem="31" firstAttribute="leading" secondItem="6" secondAttribute="leading"/>
+                            <constraint id="34" firstItem="31" firstAttribute="top" secondItem="2" secondAttribute="bottom"/>
+                            <constraint id="35" firstItem="6" firstAttribute="trailing" secondItem="31" secondAttribute="trailing"/>
+                            <constraint id="80" firstItem="21" firstAttribute="bottom" secondItem="6" secondAttribute="bottom"/>
+                            <constraint id="81" firstItem="21" firstAttribute="leading" secondItem="6" secondAttribute="leading"/>
+                            <constraint id="82" firstItem="21" firstAttribute="trailing" secondItem="6" secondAttribute="trailing"/>
+                            <constraint id="83" firstItem="21" firstAttribute="top" secondItem="31" secondAttribute="bottom"/>
+                            <constraint id="222" firstItem="6" firstAttribute="trailing" secondItem="221" secondAttribute="trailing"/>
+                            <constraint id="223" firstItem="221" firstAttribute="leading" secondItem="6" secondAttribute="leading"/>
+                            <constraint id="224" firstItem="6" firstAttribute="bottom" secondItem="221" secondAttribute="bottom"/>
+                            <constraint id="225" firstItem="221" firstAttribute="top" secondItem="31" secondAttribute="bottom"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tvPizzaList" destination="21" id="name-outlet-21"/>
+                        <outlet property="btnExpandAll" destination="213" id="name-outlet-213"/>
+                        <outlet property="pnlLoadingOverlay" destination="221" id="name-outlet-221"/>
+                        <outlet property="pbProgress" destination="226" id="name-outlet-226"/>
+                    </connections>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-392" y="13"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Images/pizza-01.png" width="873" height="873"/>
+        <image name="Icon-60.png" width="60" height="60"/>
+        <image name="Icon-Small-40.png" width="40" height="40"/>
+        <image name="Icon-Small.png" width="29" height="29"/>
+        <image name="Icon.png" width="57" height="57"/>
+        <image name="arrow-down.png" width="22" height="22"/>
+        <image name="pizza-01.png" width="873" height="873"/>
+        <image name="collapse-all.png" width="32" height="32"/>
+        <image name="expand-all.png" width="32" height="32"/>
+        <image name="pizza-bg-pattern.png" width="300" height="300"/>
+    </resources>
+</document>

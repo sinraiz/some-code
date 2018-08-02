@@ -1,0 +1,1 @@
+This C# code was extracted from the application identifying top most popular configurations of pizza toppings based on the data stored in JSON. This example demonstrates the use of C# to perform an incremental parsing of JSON and reporting the scan progress back to the caller.
